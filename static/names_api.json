@@ -1,0 +1,88 @@
+{
+  "uuid": "cc16ef55-9cfa-48d1-b584-e41e7ec8cb06",
+  "lastMigration": 32,
+  "name": "names_api",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3045,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "b7d8aebf-8ddb-41a4-b2cf-2315704e0e9d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "getNames",
+      "responses": [
+        {
+          "uuid": "c60b5ed8-2482-44bd-b3e4-2dc47aa3a39c",
+          "body": "{{#switch (queryParam 'page')}}\n  {{#case '0'}}\n    {\n      \"data\": [\n        {\n          \"name\": \"Pepe\"\n        },\n        {\n          \"name\": \"Pablo\"\n        }\n      ],\n      \"total\": 20\n    }\n  {{/case}}\n    {{#case '1'}}{\n      \"data\": [\n        {\n          \"name\": \"Angela\"\n        },\n        {\n          \"name\": \"Armando\"\n        }\n      ],\n      \"total\": 20\n    }\n  {{/case}}\n  {{#case '2'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Monica\"\n      },\n      {\n        \"name\": \"Mario\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#case '3'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Carolina\"\n      },\n      {\n        \"name\": \"Cristian\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#case '4'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Luis\"\n      },\n      {\n        \"name\": \"Lina\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#case '5'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Roberto\"\n      },\n      {\n        \"name\": \"Marta\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#case '6'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Cesar\"\n      },\n      {\n        \"name\": \"Alicia\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#case '7'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Horacio\"\n      },\n      {\n        \"name\": \"Valeria\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#case '8'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Jorge\"\n      },\n      {\n        \"name\": \"Liliana\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#case '9'}}\n  {\n    \"data\": [\n      {\n        \"name\": \"Daniel\"\n      },\n      {\n        \"name\": \"Natalia\"\n      }\n    ],\n    \"total\": 20\n  }\n  {{/case}}\n  {{#default}}\n  {\n    \"data\": [],\n    \"total\": 20\n  }\n  {{/default}}\n{{/switch}}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "page",
+              "value": "0",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "b7d8aebf-8ddb-41a4-b2cf-2315704e0e9d"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
